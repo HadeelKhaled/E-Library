@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+:root {
+  --main-color: #006270;
+  --second-color: #76787d;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*======================================= Start Navbar =======================================*/
+.navigation{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--main-color);
+  padding: 15px 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 100;
+}
+.navigation .logo{
+  font-size: 30px;
+  color: #fff;
+  font-weight: 900;
+
+}
+ul{
+  list-style: none;
+  background-color: #006270;
+}
+ul li{
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  font-size: 20px;
+}
+ul li a{
+  display: block;
+  padding: 4px 25px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px;
+
+}
+ul li a:hover{
+  color: #fff;
+  text-decoration: none;
+}
+ul li ul.dropDown li{
+  display: block;
+}
+ul.dropDown{
+  width: 200px;
+  background-color: #9eb7bb;
+  position: absolute;
+  z-index: 999;
+  display: none;
+}
+ul li:hover ul.dropDown{
+  display: block;
+}
+.btn-sign{
+  font-weight: 600;
+  padding: 5px 15px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: var(--main-color);
+  border: 2px solid #fff;
+}
+
+/*======================================= End Navbar =======================================*/
+
+/*======================================= Start Welcome page =======================================*/
+.showcase
+{
+  position: relative;
+  right: 0;
+  width: 100%;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  transition: 0.5s;
+  z-index: 2;
+  height: 800px;
+}
+.showcase.active
+{
+  right: 300px;
+}
+
+.showcase video
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+.overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #5e6162;
+  mix-blend-mode: overlay;
+}
+.text
+{
+  position: relative;
+  z-index: 10;
+}
+
+.text h3
+{
+  font-size: 4em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text h4
+{
+  font-size: 3em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text h5{
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1em;
+}
+.text p
+{
+  font-size: 1.1em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+/*======================================= End Welcome page =======================================*/
+
+
+/*===========================Footer style===============================*/
+footer{
+  width: 100%;
+  background: var(--main-color);
+  color:#fff;
+  padding: 3% 0;
+  margin-top: 13%;
+}
+.bottom .credit{
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9375rem;
+  font-size: larger;
+}
+@media screen and (max-width: 900px) {
+  footer{
+    position: relative;
+    bottom: 0px;
+  }
+  .main-content{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .main-content .box{
+    margin: 5px 0;
+  }
+}
+/*======================================= End footer =======================================*/
+
+/* Start Books */
+.books {
+  margin: 50px 0;
+}
+.card {
+  margin-bottom: 30px;
+}
+.img-cover {
+  height: 250px;
+  overflow: hidden;
+}
+.img-cover .card-img-top {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.card-title a {
+  color: var(--main-color);
+  transition: 0.3s;
+}
+.card-title a:hover {
+  text-decoration: none;
+  color: var(--second-color);
+}
+.card-text {
+  color: #777;
+  line-height: 30px;
+}
+.custom-btn {
+  padding: 10px;
+  border: 1px solid var(--main-color);
+  outline: none;
+  transition: 0.3s;
+  width: 100%;
+  background: var(--main-color);
+  color: #fff;
+}
+.custom-btn:hover {
+  background: var(--main-color);
+}
+.custom-btn a {
+  font-size: 18px;
+  display: block;
+  color: #fff;
+}
+.custom-btn a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+/* End Books */
+
+/* Start Show individual book */
+.book-cover {
+  overflow: hidden;
+}
+.book-cover img {
+  width: 100%;
+}
+.book-content {
+  margin-top: 20px;
+}
+.book-content h4 a {
+  color: #555;
+}
+.book-content h4 a:hover {
+  color: #777;
+  text-decoration: none;
+}
+.book-content p {
+  line-height: 30px;
+}
+/* Reated Books */
+.related-books {
+  margin-top: 70px;
+}
+.related-book {
+  margin: 20px 0;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #eee;
+}
+.cover {
+  overflow: hidden;
+}
+.cover img {
+  width: 100%;
+}
+.title {
+  margin: 10px 0;
+}
+.title a {
+  color: #555;
+}
+.title a:hover {
+  color: #777;
+}
+/* End Show individual book */
+
+/* Show individual book */
+.book-cover {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+}
+.book-cover img {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
